@@ -66,7 +66,7 @@ git checkout dev
 mkdir build
 cd build/
 export CXXFLAGS=-I`realpath ../../usr/ceres/include/`
-cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` -DCUDA_ENABLED=NO
+cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr`
 make -j`nproc`
 make -j`nproc` install
 
