@@ -76,6 +76,7 @@ cd ../../..
 ### Add an icon to the menu.
 ```
 cp tp_pipeline_colmap/images/icon.png /opt/tom/colmap/
+mkdir ~/.local/share/applications/
 nano ~/.local/share/applications/COLMAP.desktop
 ```
 
