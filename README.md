@@ -65,8 +65,7 @@ cd colmap
 git checkout dev
 mkdir build
 cd build/
-export CXXFLAGS=-I`realpath ../../usr/ceres/include/`
-cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr`
+cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` -DCERES_INCLUDE_DIR=../../usr/ceres/include/ -DCERES_LIBRARY=../../usr/ceres/lib64/libceres.a
 make -j`nproc`
 make -j`nproc` install
 
