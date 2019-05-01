@@ -38,12 +38,8 @@ dnf install -y gcc-c++ \
 
 ```
 
-### Install CUDA
-```
-wget https://developer.download.nvidia.com/compute/cuda/repos/fedora27/x86_64/cuda-repo-fedora27-10.0.130-1.x86_64.rpm
-rpm -i cuda-repo-*.rpm
-dnf install -y cuda
-```
+### CUDA
+* [Install CUDA](https://github.com/tdp-libs/general_machine_installation/blob/master/Fedora/NVIDIA.md)
 
 ### Build
 Following instructions on https://colmap.github.io/install.html
@@ -73,6 +69,8 @@ export CXXFLAGS=-I`realpath ../../usr/ceres/include/`
 cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` -DCUDA_ENABLED=NO
 make -j`nproc`
 make -j`nproc` install
+
+cd ../../..
 
 ```
 
