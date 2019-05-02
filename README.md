@@ -55,7 +55,11 @@ cd ceres-solver
 git checkout $(git describe --tags) # Checkout the latest release
 mkdir build
 cd build/
-cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr/ceres`
+cmake .. \
+      -DBUILD_TESTING=OFF \
+	  -DBUILD_EXAMPLES=OFF \
+	  -DCMAKE_BUILD_TYPE=RELEASE \
+	  -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr/ceres`
 make -j`nproc`
 make -j`nproc` install
 cd ../..
@@ -65,7 +69,10 @@ cd colmap
 git checkout dev
 mkdir build
 cd build/
-cmake .. -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` -DCERES_INCLUDE_DIR=../../usr/ceres/include/ -DCERES_LIBRARY=../../usr/ceres/lib64/libceres.a
+cmake .. \
+      -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` \
+	  -DCERES_INCLUDE_DIR=`realpath ../../usr/ceres/include/` \
+	  -DCERES_LIBRARY=`realpath ../../usr/ceres/lib64/libceres.a`
 make -j`nproc`
 make -j`nproc` install
 
