@@ -57,9 +57,9 @@ mkdir build
 cd build/
 cmake .. \
       -DBUILD_TESTING=OFF \
-	  -DBUILD_EXAMPLES=OFF \
-	  -DCMAKE_BUILD_TYPE=RELEASE \
-	  -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr/ceres`
+      -DBUILD_EXAMPLES=OFF \
+      -DCMAKE_BUILD_TYPE=RELEASE \
+      -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr/ceres`
 make -j`nproc`
 make -j`nproc` install
 cd ../..
@@ -71,8 +71,8 @@ mkdir build
 cd build/
 cmake .. \
       -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` \
-	  -DCERES_INCLUDE_DIR=`realpath ../../usr/ceres/include/` \
-	  -DCERES_LIBRARY=`realpath ../../usr/ceres/lib64/libceres.a`
+      -DCERES_INCLUDE_DIR=`realpath ../../usr/ceres/include/` \
+      -DCERES_LIBRARY=`realpath ../../usr/ceres/lib64/libceres.a`
 make -j`nproc`
 make -j`nproc` install
 
