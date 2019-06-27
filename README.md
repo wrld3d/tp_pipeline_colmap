@@ -68,7 +68,7 @@ make -j`nproc`
 make -j`nproc` install
 cd ../..
 
-git clone https://github.com/colmap/colmap
+git clone https://github.com/colmap/colmap --branch 3.6-dev.2 --depth 1
 cd colmap
 git checkout dev
 mkdir build
