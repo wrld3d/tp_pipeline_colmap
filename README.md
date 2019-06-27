@@ -70,7 +70,7 @@ cd ../..
 
 git clone https://github.com/colmap/colmap --branch 3.6-dev.2 --depth 1
 cd colmap
-git checkout dev
+
 mkdir build
 cd build/
 cmake .. \
