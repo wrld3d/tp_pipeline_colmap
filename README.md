@@ -45,6 +45,10 @@ dnf install -y gcc-c++ \
 Following instructions on https://colmap.github.io/install.html
 
 ```
+#!/bin/bash
+
+set -eu
+
 mkdir colmap
 cd colmap/
 
@@ -71,8 +75,8 @@ mkdir build
 cd build/
 cmake .. \
       -DCMAKE_INSTALL_PREFIX:PATH=`realpath ../../usr` \
-      -DCERES_INCLUDE_DIR=`realpath ../../usr/ceres/include/` \
-      -DCERES_LIBRARY=`realpath ../../usr/ceres/lib64/libceres.a`
+      -DCERES_INCLUDE_DIRS=`realpath ../../usr/ceres/include/` \
+      -DCERES_LIBRARIES=`realpath ../../usr/ceres/lib64/libceres.a`
 make -j`nproc`
 make -j`nproc` install
 
